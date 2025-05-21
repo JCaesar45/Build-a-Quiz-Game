@@ -1,0 +1,60 @@
+** start of script.js **
+
+// 1. Create the questions array with at least five objects
+const questions = [
+  {
+    category: "Science",
+    question: "What is the chemical symbol for water?",
+    choices: ["H2O", "CO2", "O2"],
+    answer: "H2O"
+  },
+  {
+    category: "Geography",
+    question: "What is the capital of France?",
+    choices: ["Paris", "Rome", "Berlin"],
+    answer: "Paris"
+  },
+  {
+    category: "Math",
+    question: "What is 7 * 6?",
+    choices: ["42", "36", "48"],
+    answer: "42"
+  },
+  {
+    category: "History",
+    question: "Who was the first president of the United States?",
+    choices: ["George Washington", "Abraham Lincoln", "Thomas Jefferson"],
+    answer: "George Washington"
+  },
+  {
+    category: "Sports",
+    question: "How many players are on a basketball team on the court?",
+    choices: ["5", "6", "7"],
+    answer: "5"
+  }
+];
+
+// 2. Function to get a random question
+function getRandomQuestion(questionsArray) {
+  const randomIndex = Math.floor(Math.random() * questionsArray.length);
+  return questionsArray[randomIndex];
+}
+
+// 3. Function to get a random computer choice from choices array
+function getRandomComputerChoice(choicesArray) {
+  const randomIndex = Math.floor(Math.random() * choicesArray.length);
+  return choicesArray[randomIndex];
+}
+
+// 4. Function to evaluate the result
+function getResults(questionObject, computerChoice) {
+  if (computerChoice === questionObject.answer) {
+    return "The computer's choice is correct!";
+  } else {
+    return `The computer's choice is wrong. The correct answer is: ${questionObject.answer}`;
+  }
+}
+
+
+** end of script.js **
+
